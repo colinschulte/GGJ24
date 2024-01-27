@@ -9,6 +9,7 @@ public class DisplayPrompt : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI promptText;
     [SerializeField] private List<Button> buttons;
+    [SerializeField] private RelayManager relayManager;
     private List<string> promptList;
     private Dictionary<string, int> inputList;
     private int promptEnum = 0;
@@ -64,5 +65,11 @@ public class DisplayPrompt : MonoBehaviour
         Button button = buttons[buttonID];
         string answer = button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
         int playerID = inputList[answer];
+        
+    }
+
+    public void TallyVotes(int playerID)
+    {
+
     }
 }
