@@ -8,6 +8,9 @@ public class PlayerSetup : NetworkBehaviour
 {
     public static int PlayerNumber {  get; private set; }
 
+    // Host only
+    public static int ConnectedPlayers {  get; private set; }
+
     [SerializeField] private TMP_InputField usernameField;
 
     private readonly List<ulong> playerIDs = new();
@@ -26,6 +29,8 @@ public class PlayerSetup : NetworkBehaviour
         // Wait until all players have loaded into the scene
         playerIDs.Add(clientId);
         playerUsernames.Add(playerUsername);
+
+        ConnectedPlayers = playerIDs.Count;
 
         // Assign PlayerNumber to the connected player
         AssignPlayerNumberClientRpc(playerIDs.Count - 1, new ClientRpcParams { Send = new ClientRpcSendParams { TargetClientIds = new List<ulong> { clientId } } });
