@@ -10,12 +10,16 @@ public class DisplayPrompt : MonoBehaviour
     [SerializeField] private TextMeshProUGUI promptText;
     [SerializeField] private List<Button> buttons;
     [SerializeField] private RelayManager relayManager;
+    [SerializeField] private GameObject resultsPanel;
     private List<string> promptList;
     private Dictionary<int, int> scoreList;
+    private Dictionary<int, int> rankList;
     private Dictionary<string, int> inputList;
     private int promptEnum = 0;
     private int inputEnum = 0;
-    private int votesLeft = PlayerSetup.ConnectedPlayers;
+    //private int votesLeft = PlayerSetup.ConnectedPlayers;
+    private int votesLeft = 8;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +52,8 @@ public class DisplayPrompt : MonoBehaviour
             button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = input.Key;
             inputEnum++;
         }
+        CreateScoreList();
+        rankList = new Dictionary<int, int>();
     }
 
     // Update is called once per frame
@@ -67,6 +73,7 @@ public class DisplayPrompt : MonoBehaviour
         Button button = buttons[buttonID];
         string answer = button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
         int playerID = inputList[answer];
+        AddVote(playerID);
     }
 
     public void AddVote(int playerID)
@@ -81,12 +88,58 @@ public class DisplayPrompt : MonoBehaviour
 
     public void TallyVotes()
     {
-        //scoreList;
+        int hiScore = 0;
+        foreach(KeyValuePair<int, int> score in scoreList)
+        {
+            if(score.Value > hiScore)
+            {
+                hiScore = score.Value;
+            }
+        }
+        int rankNumber = 1;
+        bool rankAdded = false;
+        while(hiScore >= 0)
+        {
+
+            foreach (KeyValuePair<int, int> score in scoreList)
+            {
+                if (score.Value == hiScore) 
+                {
+                    rankList.Add(score.Key, rankNumber);
+                    rankAdded = true;
+                }
+            }
+            hiScore--;
+            if(rankAdded)
+            {
+                rankNumber++;
+                rankAdded = false;
+            }
+        }
+        DisplayResults();
+    }
+
+    public void DisplayResults()
+    {
+        promptText.text = "Results";
+        foreach(Button button in buttons)
+        {
+            button.gameObject.SetActive(false);
+        }
+        resultsPanel.SetActive(true);
+        string resultsText = "Player  Rank" + System.Environment.NewLine;
+        foreach(KeyValuePair<int, int> rank in rankList)
+        {
+            resultsText += rank.Key + "  " + rank.Value + System.Environment.NewLine;
+        }
+        resultsPanel.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = resultsText;
     }
 
     public void CreateScoreList()
     {
-        for (int i = 0; i < PlayerSetup.ConnectedPlayers; i++) 
+        scoreList = new Dictionary<int, int>();
+        //for (int i = 0; i < PlayerSetup.ConnectedPlayers; i++) 
+        for (int i = 0; i < 8; i++)
         {
             scoreList.Add(i, 0);
         }
