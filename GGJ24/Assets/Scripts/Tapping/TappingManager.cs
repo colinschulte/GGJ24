@@ -14,18 +14,27 @@ public class TappingManager : MonoBehaviour
     // time for minigame
     public int time;
 
+    bool stop;
+
+    public RelayManager relay;
+
     private void Start()
     {
         countdown_UI.text = time.ToString();
         tap_count = 0;
+        stop = false;
         Start_timer();
     }
 
     // on_click() for the button
     public void tap()
     {
-        tap_count += 1;
-        Debug.Log(tap_count);
+        if (!stop)
+        {
+            tap_count += 1;
+            Debug.Log(tap_count);
+        }
+
     }
 
     // Start the timer Coroutine
@@ -45,6 +54,7 @@ public class TappingManager : MonoBehaviour
             countdown_UI.text = time_left.ToString();
         }
         // yield return new WaitForSeconds(n);
-        SceneManager.LoadScene("SampleScene");
+        stop = true;
+        relay.sendGradeToServerRpc(PlayerData.PlayerNumber, tap_count);
     }
 }
