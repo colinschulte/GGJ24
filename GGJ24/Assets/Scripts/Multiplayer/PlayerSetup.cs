@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PlayerSetup : NetworkBehaviour
 {
+    public static int PlayerNumber {  get; private set; }
+
     [SerializeField] private TMP_InputField usernameField;
 
     private readonly List<ulong> playerIDs = new();
@@ -25,12 +27,22 @@ public class PlayerSetup : NetworkBehaviour
         playerIDs.Add(clientId);
         playerUsernames.Add(playerUsername);
 
+        // Assign PlayerNumber to the connected player
+        AssignPlayerNumberClientRpc(playerIDs.Count - 1, new ClientRpcParams { Send = new ClientRpcSendParams { TargetClientIds = new List<ulong> { clientId } } });
+
         // Display connected players
 
         if (playerIDs.Count < minimumPlayers)
             return;
 
         // Allow host to start game if enough players are ready
+    }
+
+    [ClientRpc]
+    private void AssignPlayerNumberClientRpc(int newPlayerNumber, ClientRpcParams clientRpcParams)
+    {
+        PlayerNumber = newPlayerNumber;
+        Debug.Log(PlayerNumber);
     }
 
     [ClientRpc]

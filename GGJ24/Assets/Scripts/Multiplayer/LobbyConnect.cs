@@ -11,7 +11,6 @@ using Unity.Services.Relay.Models;
 using Unity.Services.Relay;
 using UnityEngine;
 using System.Threading.Tasks;
-using System;
 using TMPro;
 
 public class LobbyConnect : NetworkBehaviour
@@ -23,17 +22,28 @@ public class LobbyConnect : NetworkBehaviour
 
     private Lobby currentLobby;
 
-    public enum ConnectionStatus { Connecting, Connected, Offline }
-    [NonSerialized] public ConnectionStatus connectionStatus = ConnectionStatus.Connecting;
-
     private void Start()
     {
+        if (PlayerPrefs.HasKey("Username"))
+            usernameField.text = PlayerPrefs.GetString("Username");
+        if (PlayerPrefs.HasKey("LobbyCode"))
+            lobbyCodeField.text = PlayerPrefs.GetString("LobbyCode");
+
         _ = ConnectToRelay();
+    }
+
+    public void OnUsernameChange()
+    {
+        PlayerPrefs.SetString("Username", usernameField.text);
+    }
+    public void OnLobbyCodeChange()
+    {
+        PlayerPrefs.SetString("LobbyCode", lobbyCodeField.text);
     }
 
     private async Task ConnectToRelay() //run in Start
     {
-        Debug.Log("Connecting...");
+        errorText.text = "Connecting...";
 
         await UnityServices.InitializeAsync();
 
@@ -46,11 +56,11 @@ public class LobbyConnect : NetworkBehaviour
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-            connectionStatus = ConnectionStatus.Connected;
+            errorText.text = "Connected!";
         }
         catch
         {
-            connectionStatus = ConnectionStatus.Offline;
+            errorText.text = "Connection failed. Please check you internet connection and restart the game";
         }
     }
 
@@ -107,12 +117,14 @@ public class LobbyConnect : NetworkBehaviour
     {
         try
         {
-                // Check for existing lobbies with the provided code
+            // Check for existing lobbies with the provided code
 
+#pragma warning disable IDE0017 // Simplify object initialization
             QueryLobbiesOptions queryLobbiesOptions = new()
             {
                 Count = 50
             };
+#pragma warning restore IDE0017 // Simplify object initialization
             queryLobbiesOptions.Filters = new List<QueryFilter>()
             {
                 new(field: QueryFilter.FieldOptions.S2, op: QueryFilter.OpOptions.EQ, value: lobbyCodeField.text)
@@ -128,13 +140,13 @@ public class LobbyConnect : NetworkBehaviour
                 // Create Lobby
 
             // Lobby is public by default
-            currentLobby = await LobbyService.Instance.CreateLobbyAsync("NewLobby", 2); //number of players
+            currentLobby = await LobbyService.Instance.CreateLobbyAsync("NewLobby", 8); // Number of players
 
             Debug.Log("Created Lobby");
 
             StartCoroutine(HandleLobbyHeartbeat());
 
-            Allocation hostAllocation = await RelayService.Instance.CreateAllocationAsync(1); //number of non-host connections
+            Allocation hostAllocation = await RelayService.Instance.CreateAllocationAsync(7); // Number of non-host connections
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(hostAllocation, "dtls"));
 
             NetworkManager.Singleton.StartHost();
@@ -193,9 +205,9 @@ public class LobbyConnect : NetworkBehaviour
       
             if (queryResponse.Results[0].Data == null || !queryResponse.Results[0].Data.ContainsKey("JoinCode"))
             {
-                //Data is null when no data values exist, such as a JoinCode
-                //JoinCode is created when host is first connected to relay. It's possible to join the lobby before the relay connection
-                //is established and before JoinCode is created
+                // Data is null when no data values exist, such as a JoinCode
+                // JoinCode is created when host is first connected to relay. It's possible to join the lobby before the relay connection
+                // is established and before JoinCode is created
                 Debug.Log("Lobby is still being created, trying again in 2 seconds");
                 Invoke(nameof(JoinLobby), 2);
                 return;
@@ -243,7 +255,7 @@ public class LobbyConnect : NetworkBehaviour
     //    SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
     //}
 
-    public void ExitGame() //called by ExitGame
+    public void ExitGame()
     {
         LeaveLobby();
 
@@ -261,8 +273,9 @@ public class LobbyConnect : NetworkBehaviour
                 else
                     await Lobbies.Instance.RemovePlayerAsync(currentLobby.Id, AuthenticationService.Instance.PlayerId);
             }
-
-            currentLobby = null; //avoid heartbeat errors in editor since playmode doesn't stop
+            
+            // Avoids heartbeat errors in editor since playmode doesn't stop
+            currentLobby = null;
 
             NetworkManager.Singleton.Shutdown();
         }
