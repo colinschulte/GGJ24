@@ -12,11 +12,15 @@ using Unity.Services.Relay;
 using UnityEngine;
 using System.Threading.Tasks;
 using TMPro;
+using UnityEngine.UI;
 
 public class LobbyConnect : NetworkBehaviour
 {
     [SerializeField] private TMP_InputField usernameField;
     [SerializeField] private TMP_InputField lobbyCodeField;
+
+    [SerializeField] private Button joinLobbyButton;
+    [SerializeField] private Button createLobbyButton;
 
     [SerializeField] private TMP_Text errorText;
 
@@ -58,7 +62,7 @@ public class LobbyConnect : NetworkBehaviour
 
             errorText.text = "Connected!";
 
-
+            ToggleEnterLobbyInterface(true);
         }
         catch
         {
@@ -79,6 +83,14 @@ public class LobbyConnect : NetworkBehaviour
         await LobbyService.Instance.SendHeartbeatPingAsync(currentLobby.Id);
     }
 
+
+    private void ToggleEnterLobbyInterface(bool on)
+    {
+        createLobbyButton.interactable = on;
+        joinLobbyButton.interactable = on;
+        usernameField.interactable = on;
+        lobbyCodeField.interactable = on;
+    }
 
 
     public void SelectCreateLobby()
@@ -230,6 +242,13 @@ public class LobbyConnect : NetworkBehaviour
         {
             Debug.Log(e);
         }
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        errorText.text = "Joined Lobby!";
+
+        ToggleEnterLobbyInterface(false);
     }
 
     //public override void OnNetworkSpawn()
