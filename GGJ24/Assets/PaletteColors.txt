@@ -1,6 +1,5 @@
-255 255 255 FFFFFF white
-118 118 118 767676 gray (emphasis
-46 47 46 2E2F2E dark
+118 118 118 767676 gray (emphasis)
+46 47 46 2E2F2E dark gray (background)
 200 46 46 C82E2E red (player 1)
 46 73 200 2E49C8 blue (player 2)
 46 200 55 2EC837 green (player 3)

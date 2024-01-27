@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,12 +19,17 @@ public class PlayerSetup : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        ConnectPlayerServerRpc(NetworkManager.Singleton.LocalClientId, usernameField.text);
+        int[] array = new int[4];
+        array[0] = 1; array[1] = 2; array[2] = 3; array[3] = 4;
+
+
+        ConnectPlayerServerRpc(NetworkManager.Singleton.LocalClientId, usernameField.text, array);
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void ConnectPlayerServerRpc(ulong clientId, string playerUsername)
+    private void ConnectPlayerServerRpc(ulong clientId, string playerUsername, int[] array)
     {
+        Debug.Log(array.Length);
         // Wait until all players have loaded into the scene
         playerIDs.Add(clientId);
         playerUsernames.Add(playerUsername);
