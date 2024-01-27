@@ -874,6 +874,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169623cfd0ec08b4cbdce526c4eb2fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sp: {fileID: 0}
+  sps:
+  - {fileID: 21300000, guid: 9ed7d0f856e8e3b4f880f9dbcff0b020, type: 3}
+  - {fileID: 21300000, guid: 2e4af55ac86db9449a4ac32b5ece8ef9, type: 3}
+  - {fileID: 21300000, guid: ecafae8173d9cb54ca3e8a0edb9ac8a7, type: 3}
+  - {fileID: 21300000, guid: 0fe3511b45fd2254bbe51168391749ee, type: 3}
+  - {fileID: 21300000, guid: 8d43f284e18a49d4c88840896f6c75e0, type: 3}
+  - {fileID: 21300000, guid: 22b226fc42dd2ac4fa0424af4a0adccf, type: 3}
+  - {fileID: 21300000, guid: fdb3961a43c79b142ba2683f45108c19, type: 3}
+  - {fileID: 21300000, guid: 0e1ee78b932a56547a91309504242c8b, type: 3}
   block: {fileID: 8986303905069622451, guid: bb08fd3bf1a82b64fb3d246504e07142, type: 3}
   min_Force: 0
   max_Force: 5
