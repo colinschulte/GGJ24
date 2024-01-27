@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 74618324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &74618324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 106930288}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &106930288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,7 +1143,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 599040283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &599040283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,7 +1611,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 862862361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &862862361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1964,7 +2012,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1122703083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1122703083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,7 +2145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1129662715}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1129662715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2206,7 +2278,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164545264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1164545264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2595,7 +2679,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1458247077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1458247077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,7 +2812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1619373829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 287370740}
+        m_TargetAssemblyTypeName: DisplayPrompt, Assembly-CSharp
+        m_MethodName: CastVote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1619373829
 MonoBehaviour:
   m_ObjectHideFlags: 0

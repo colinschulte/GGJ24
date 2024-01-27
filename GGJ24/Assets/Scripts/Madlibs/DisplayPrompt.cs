@@ -26,25 +26,23 @@ public class DisplayPrompt : MonoBehaviour
             "You know it's a bad day when the ______ is missing"
         };
 
-        inputList = new List<(string, int)>
-        {
-            ("carrot", 0),
-            ("apple", 1),
-            ("tire", 2),
-            ("pizza", 0),
-            ("Chungus", 3),
-            ("boot", 4),
-            ("eagle", 5),  
-            ("K-Mart", 6)
-        };
+        inputList = new Dictionary<string, int> { };
+        inputList.Add("carrot", 0);
+        inputList.Add("apple", 1);
+        inputList.Add("tire", 2);
+        inputList.Add("pizza", 0);
+        inputList.Add("Chungus", 3);
+        inputList.Add("boot", 4);
+        inputList.Add("eagle", 5);
+        inputList.Add("K-Mart", 6);
 
         promptText.text = promptList[promptEnum];
 
-        foreach((string, int) input in inputList)
+        foreach(KeyValuePair<string, int> input in inputList)
         {
             Button button = buttons[inputEnum];
             button.gameObject.SetActive(true);
-            button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = input.Item1;
+            button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = input.Key;
             inputEnum++;
         }
     }
@@ -65,6 +63,6 @@ public class DisplayPrompt : MonoBehaviour
     {
         Button button = buttons[buttonID];
         string answer = button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
-        int playerID = inputList.Find(answer)
+        int playerID = inputList[answer];
     }
 }
