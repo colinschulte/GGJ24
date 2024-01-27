@@ -86,6 +86,12 @@ public class PlayerData : MonoBehaviour
         relay.sendMiniGameGradeClientRpc(playerNumbers);
     } 
 
+    void sendAnswer()
+    {
+        string answer = "test";
+        relay.sendAnswerClientRPC(PlayerNumber, answer);
+    }
+
     public void setArr(int index, int[] arr)
     {
         if (index == 0)

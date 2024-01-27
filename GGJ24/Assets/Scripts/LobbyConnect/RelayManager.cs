@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
 public class RelayManager : NetworkBehaviour
@@ -38,4 +39,9 @@ public class RelayManager : NetworkBehaviour
         player.setArr(1, arr);
     }
 
+    [ClientRpc]
+    public void sendAnswerClientRPC(int playerID, string ans)
+    {
+        player.addAnswer(playerID, ans);
+    }
 }
