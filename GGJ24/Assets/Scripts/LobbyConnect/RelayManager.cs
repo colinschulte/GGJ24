@@ -11,9 +11,9 @@ public class RelayManager : NetworkBehaviour
 
     // The host player is a server AND a client.
     // This method is called by the any client. It only runs on the Host.
-    // The method's name MUST end with 'ServerRpc'. RequireOwnership must be false!
+    // The method's name MUST end with 'ClientRpc'. RequireOwnership must be false!
     [ClientRpc]
-    public void SendPlayerIDtoHostServerRpc(int playerID)
+    public void SendPlayerIDtoHostClientRpc(int playerID)
     {
         prompt.TallyVotes(playerID);
     }
