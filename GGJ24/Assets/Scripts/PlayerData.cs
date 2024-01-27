@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    public static int PlayerNumber;
+
     private List<(int, int)> miniGameGrade;
 
     private int msgReceivedCount;

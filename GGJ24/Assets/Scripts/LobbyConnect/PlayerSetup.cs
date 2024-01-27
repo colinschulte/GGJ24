@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class PlayerSetup : NetworkBehaviour
 {
-    public static int PlayerNumber {  get; private set; }
-
     // Host only
     public static int ConnectedPlayers {  get; private set; }
 
@@ -46,8 +44,7 @@ public class PlayerSetup : NetworkBehaviour
     [ClientRpc]
     private void AssignPlayerNumberClientRpc(int newPlayerNumber, ClientRpcParams clientRpcParams)
     {
-        PlayerNumber = newPlayerNumber;
-        Debug.Log(PlayerNumber);
+        PlayerData.PlayerNumber = newPlayerNumber;
     }
 
     [ClientRpc]
