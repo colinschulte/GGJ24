@@ -7,6 +7,8 @@ public class RelayManager : NetworkBehaviour
 {
     [SerializeField] private DisplayPrompt prompt;
 
+    PlayerData player;
+
     // The only class that handled mid-game network logic.
 
     // The host player is a server AND a client.
@@ -18,5 +20,22 @@ public class RelayManager : NetworkBehaviour
         prompt.TallyVotes(playerID);
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void sendGradeToServerRpc(int playerNumber, int grade)
+    {
+        player.addGrade(playerNumber, grade);
+    }
+
+    [ClientRpc]
+    public void sendMiniGameGradeClientRpc(int[] arr)
+    {
+        player.setArr(0, arr);
+    }
+
+    [ClientRpc]
+    public void sendRankingClientRpc(int[] arr)
+    {
+        player.setArr(1, arr);
+    }
 
 }
