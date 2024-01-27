@@ -11,9 +11,11 @@ public class DisplayPrompt : MonoBehaviour
     [SerializeField] private List<Button> buttons;
     [SerializeField] private RelayManager relayManager;
     private List<string> promptList;
+    private Dictionary<int, int> scoreList;
     private Dictionary<string, int> inputList;
     private int promptEnum = 0;
     private int inputEnum = 0;
+    private int votesLeft = PlayerSetup.ConnectedPlayers;
 
     // Start is called before the first frame update
     void Start()
@@ -65,11 +67,33 @@ public class DisplayPrompt : MonoBehaviour
         Button button = buttons[buttonID];
         string answer = button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
         int playerID = inputList[answer];
-        
     }
 
-    public void TallyVotes(int playerID)
+    public void AddVote(int playerID)
     {
+        scoreList[playerID]++;
+        votesLeft--;
+        if(votesLeft == 0)
+        {
+            TallyVotes();
+        }
+    }
 
+    public void TallyVotes()
+    {
+        //scoreList;
+    }
+
+    public void CreateScoreList()
+    {
+        for (int i = 0; i < PlayerSetup.ConnectedPlayers; i++) 
+        {
+            scoreList.Add(i, 0);
+        }
+    }
+
+    public void ProcessInput(string input)
+    {
+        inputList.Add(input, PlayerData.PlayerNumber);
     }
 }

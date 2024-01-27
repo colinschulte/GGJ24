@@ -17,7 +17,7 @@ public class RelayManager : NetworkBehaviour
     [ClientRpc]
     public void SendPlayerIDtoHostClientRpc(int playerID)
     {
-        prompt.TallyVotes(playerID);
+        prompt.AddVote(playerID);
     }
 
     [ServerRpc(RequireOwnership = false)]
