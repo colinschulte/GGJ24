@@ -19,17 +19,12 @@ public class PlayerSetup : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        int[] array = new int[4];
-        array[0] = 1; array[1] = 2; array[2] = 3; array[3] = 4;
-
-
-        ConnectPlayerServerRpc(NetworkManager.Singleton.LocalClientId, usernameField.text, array);
+        ConnectPlayerServerRpc(NetworkManager.Singleton.LocalClientId, usernameField.text);
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void ConnectPlayerServerRpc(ulong clientId, string playerUsername, int[] array)
+    private void ConnectPlayerServerRpc(ulong clientId, string playerUsername)
     {
-        Debug.Log(array.Length);
         // Wait until all players have loaded into the scene
         playerIDs.Add(clientId);
         playerUsernames.Add(playerUsername);
