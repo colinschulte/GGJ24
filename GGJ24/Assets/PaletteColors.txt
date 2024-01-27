@@ -1,0 +1,11 @@
+255 255 255 FFFFFF white
+118 118 118 767676 gray (emphasis
+46 47 46 2E2F2E dark
+200 46 46 C82E2E red (player 1)
+46 73 200 2E49C8 blue (player 2)
+46 200 55 2EC837 green (player 3)
+200 199 46 C8C72E yellow (player 4)
+200 46 200 C82EC8 pink (player 5)
+46 200 195 2EC8C3 ice blue (player 6)
+200 124 46 C87C2E orange (player 7)
+189 190 189 BDBEBD light gray (player 8)
