@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGame_Tapping.unity
     guid: cd0de755087ebbd43b23599a61949999
   - enabled: 1
-    path: Assets/Scenes/MultiplayerScene.unity
+    path: Assets/Scenes/LobbyConnect.unity
     guid: ef77fdd5522301a47a7ba05fca85083b
   m_configObjects: {}

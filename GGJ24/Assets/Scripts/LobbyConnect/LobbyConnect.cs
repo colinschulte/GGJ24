@@ -57,6 +57,8 @@ public class LobbyConnect : NetworkBehaviour
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
             errorText.text = "Connected!";
+
+
         }
         catch
         {
