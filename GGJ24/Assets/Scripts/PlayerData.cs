@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ public class PlayerData : MonoBehaviour
 
     // reference of Relaymanager
     public RelayManager relay;
+
+    // string array storing the text should be shown
+    public List<(int,string)> answerToBeShown;
 
     // Static Integer representing (this) player's playerNumber
     public static int PlayerNumber;
@@ -66,6 +70,7 @@ public class PlayerData : MonoBehaviour
         gradeSent = false;
         miniGameGrade = new List<(int, int)>();
         answerList = new List<(int, string)>();
+        answerToBeShown = new List<(int,string)>();
     }
     
 
@@ -143,7 +148,34 @@ public class PlayerData : MonoBehaviour
         /* relay.sendMiniGameGradeClientRpc(playerGrades);
          relay.sendMiniGameRankClientRpc(playerRanks);*/
         relay.showWinnerClientRpc(playerRanks[totalPlayerNumber-1]);
-    } 
+        StartCoroutine(toMadlibScreen());
+    }
+
+    IEnumerator toMadlibScreen() {
+        yield return new WaitForSeconds(8);
+        toMadlib();
+    }
+
+    public void toMadlib()
+    {
+        int winner = miniGameGrade[totalPlayerNumber - 1].Item1;
+        bool[] chosenAnswer = new bool[totalPlayerNumber];
+        for (int i = 0; i < chosenAnswer.Length; i++)
+        {
+            chosenAnswer[i] = false;
+        }
+        for (int i = 0; i < answerList.Count; i++)
+        {
+            if (answerList[i].Item1 != winner && !chosenAnswer[answerList[i].Item1])
+            {
+                chosenAnswer[answerList[i].Item1] = true;
+                relay.addShowingAnswerClientRpc(answerList[i].Item1, answerList[i].Item2);
+            }
+        }
+
+
+        relay.toMadlibScreenClientRpc();
+    }
 
     // **TODO** supposed to do the same thing as sendGrade() but just change the target to the text answer.
     public void sendAnswerToServer(string ans)

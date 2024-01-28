@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject promptScreen;
     [SerializeField] public GameObject miniGameScreen;
     [SerializeField] public GameObject winnerScreen;
+    [SerializeField] public GameObject madlibScreen;
 
     [SerializeField] RelayManager relay;
 
@@ -75,5 +76,11 @@ public class GameManager : MonoBehaviour
         winnerScreen.SetActive(true);
 
         winnerScreen.GetComponent<WinnerScreen>().showWinner(PlayerData.PlayerUsernames[index]);
+    }
+
+    public void toMadlibScreen()
+    {
+        winnerScreen.SetActive(false);
+        madlibScreen.SetActive(true);
     }
 }

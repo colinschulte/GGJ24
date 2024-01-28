@@ -64,4 +64,16 @@ public class RelayManager : NetworkBehaviour
     {
         GM.clientShowWinner(winner);
     }
+
+    [ClientRpc]
+    public void toMadlibScreenClientRpc()
+    {
+        GM.toMadlibScreen();
+    }
+
+    [ClientRpc]
+    public void addShowingAnswerClientRpc(int p_number, string ans)
+    {
+        player.answerToBeShown.Add((p_number, ans));
+    }
 }
