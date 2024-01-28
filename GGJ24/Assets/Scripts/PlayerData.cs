@@ -62,7 +62,14 @@ public class PlayerData : MonoBehaviour
         "An ________ a day keeps the goblins away.",
         "When life gives you ______ make ______-ade!",
         "Don't touch that! It's covered in ______!",
-        "You know it's a bad day when the ______ is missing"
+        "You know it's a bad day when the ______ is missing",
+        "The queen ordered all her maidens-in-waiting to search for the missing ______.",
+        "Who goes there? Reveal yourself or I'll ______.",
+        "The king likes to wear ______ on his hands to keep warm.",
+        "I adopted a rescue dragon from the shelter and named it ______.",
+        "For a special occasion, the queen had the royal chef cook a large _______.",
+        "The archer made a bet that he could safely shoot a _______ off of my head."
+
     };
 
     // Start is called before the first frame update
