@@ -33,7 +33,6 @@ public class PlayerSetup : NetworkBehaviour
     [SerializeField] private List<Image> playerAvatars;
 
     private readonly List<ulong> playerIDs = new();
-    private readonly string[] playerUsernames = new string[8];
     private readonly int[] playerAvatarTypes = new int[8];
 
     private readonly int numberOfAvatarTypes = 8;
@@ -67,7 +66,8 @@ public class PlayerSetup : NetworkBehaviour
     {
         // Add playerID and username
         playerIDs.Add(clientId);
-        playerUsernames[playerIDs.Count - 1] = playerUsername; 
+
+        PlayerData.PlayerUsernames[playerIDs.Count - 1] = playerUsername;
 
         ConnectedPlayers = playerIDs.Count;
 
@@ -81,8 +81,8 @@ public class PlayerSetup : NetworkBehaviour
         playerAvatarTypes[playerIDs.Count - 1] = newRandomNumber;
 
         // Send updated username and avatar type arrays to all clients
-        UpdateAvatarsClientRpc(playerAvatarTypes, playerUsernames[0], playerUsernames[1], playerUsernames[2],
-            playerUsernames[3], playerUsernames[4], playerUsernames[5], playerUsernames[6], playerUsernames[7]);
+        UpdateAvatarsClientRpc(playerAvatarTypes, PlayerData.PlayerUsernames[0], PlayerData.PlayerUsernames[1], PlayerData.PlayerUsernames[2],
+            PlayerData.PlayerUsernames[3], PlayerData.PlayerUsernames[4], PlayerData.PlayerUsernames[5], PlayerData.PlayerUsernames[6], PlayerData.PlayerUsernames[7]);
 
 
         if (playerIDs.Count < minimumPlayers)
@@ -108,20 +108,24 @@ public class PlayerSetup : NetworkBehaviour
     {
         avatarTypes = newAvatarTypes;
 
-        playerUsernamesTexts[0].text = player1Username;
-        playerUsernamesTexts[1].text = player2Username;
-        playerUsernamesTexts[2].text = player3Username;
-        playerUsernamesTexts[3].text = player4Username;
-        playerUsernamesTexts[4].text = player5Username;
-        playerUsernamesTexts[5].text = player6Username;
-        playerUsernamesTexts[6].text = player7Username;
-        playerUsernamesTexts[7].text = player8Username;
+        PlayerData.PlayerUsernames[0] = player1Username;
+        PlayerData.PlayerUsernames[1] = player2Username;
+        PlayerData.PlayerUsernames[2] = player3Username;
+        PlayerData.PlayerUsernames[3] = player4Username;
+        PlayerData.PlayerUsernames[4] = player5Username;
+        PlayerData.PlayerUsernames[5] = player6Username;
+        PlayerData.PlayerUsernames[6] = player7Username;
+        PlayerData.PlayerUsernames[7] = player8Username;
 
         for (int i = 0; i < avatarTypes.Length; i++)
         {
             // -1 is default
             if (avatarTypes[i] == -1)
                 break;
+
+
+            playerUsernamesTexts[i].text = PlayerData.PlayerUsernames[i];
+
 
             int randomNumber = avatarTypes[i];
 

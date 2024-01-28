@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    // List of all players in game
+    public static List<string> PlayerUsernames = new();
+
     // reference of Relaymanager
     public RelayManager relay;
 
