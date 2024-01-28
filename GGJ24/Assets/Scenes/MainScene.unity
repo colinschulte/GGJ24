@@ -2227,7 +2227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 424699550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350314983}
+        m_TargetAssemblyTypeName: PlayerSetup, Assembly-CSharp
+        m_MethodName: SelectStartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &438730383
 GameObject:
   m_ObjectHideFlags: 0
@@ -7182,6 +7194,7 @@ MonoBehaviour:
   titleScreen: {fileID: 1218471936}
   lobbyConnectScreen: {fileID: 656368489}
   promptScreen: {fileID: 18997935}
+  relay: {fileID: 0}
 --- !u!1 &1036382313
 GameObject:
   m_ObjectHideFlags: 0
@@ -8524,6 +8537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: {fileID: 0}
+  player: {fileID: 0}
+  GM: {fileID: 0}
 --- !u!114 &1350314983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8637,6 +8652,7 @@ MonoBehaviour:
   - {fileID: 1228882471}
   - {fileID: 901102226}
   - {fileID: 1214261689}
+  gameManager: {fileID: 0}
 --- !u!114 &1350314984
 MonoBehaviour:
   m_ObjectHideFlags: 0

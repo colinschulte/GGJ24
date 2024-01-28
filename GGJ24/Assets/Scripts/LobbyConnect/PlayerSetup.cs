@@ -126,13 +126,14 @@ public class PlayerSetup : NetworkBehaviour
     [SerializeField] private GameManager gameManager;
     public void SelectStartGame()
     {
+        int prompt_index = Random.Range(0, 10);
         // Only run on Host
-        StartGameClientRpc();
+        StartGameClientRpc(prompt_index);
     }
 
     [ClientRpc]
-    public void StartGameClientRpc()
+    public void StartGameClientRpc(int p_index)
     {
-        gameManager.ClientStartGame();
+        gameManager.ClientStartGame(p_index);
     }
 }

@@ -42,17 +42,10 @@ public class RelayManager : NetworkBehaviour
     }
 
     [ClientRpc]
-    public void sendAnswerClientRPC(int playerID, string ans)
+    public void sendAnswerClientRpc(int playerID, string ans)
     {
         player.addAnswer(playerID, ans);
     }
 
-    [ClientRpc]
-    public void goPromptSceneClientRpc()
-    {
-
-        GM.lobbyConnectScreen.SetActive(false);
-
-        GM.promptScreen.SetActive(true);
-    }
+    
 }

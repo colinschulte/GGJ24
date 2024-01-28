@@ -121,7 +121,7 @@ public class PlayerData : MonoBehaviour
     void sendAnswer()
     {
         string answer = "test";
-        relay.sendAnswerClientRPC(PlayerNumber, answer);
+        relay.sendAnswerClientRpc(PlayerNumber, answer);
     }
 
     // for clients to receive and store the results of grade/answer after host's processing.

@@ -46,13 +46,7 @@ public class GameManager : MonoBehaviour
         lobbyConnectScreen.SetActive(true);
     }
 
-
-    public void SelectStartGame()
-    {
-        relay.goPromptSceneClientRpc();
-    }
-
-    public void ClientStartGame()
+    public void ClientStartGame(int p_index)
     {
         // Run on all clients once the host starts the game
 
