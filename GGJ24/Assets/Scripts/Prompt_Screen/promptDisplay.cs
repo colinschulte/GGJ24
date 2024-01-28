@@ -8,6 +8,9 @@ public class promptDisplay : MonoBehaviour
 {
     [SerializeField] TMP_Text prompt;
 
+    [SerializeField] TMP_InputField input1;
+    [SerializeField] TMP_InputField input2;
+
     public Button submit;
     public void set_Text(string p) 
     {
@@ -33,6 +36,8 @@ public class promptDisplay : MonoBehaviour
     {
         player.sendAnswerToServer(ans1);
         player.sendAnswerToServer(ans2);
+        input1.interactable = false;
+        input2.interactable = false;
         submit.interactable = false;
     }
 }

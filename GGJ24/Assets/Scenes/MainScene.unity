@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &18997936
 RectTransform:
   m_ObjectHideFlags: 0
@@ -180,6 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: {fileID: 1543170816}
+  input1: {fileID: 798052601}
+  input2: {fileID: 1066622643}
+  submit: {fileID: 1449040032}
   player: {fileID: 2015120931}
 --- !u!1 &93934005
 GameObject:
