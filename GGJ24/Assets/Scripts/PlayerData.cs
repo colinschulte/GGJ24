@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    public string prompt;
+
+
     // List of all players in game
     public static List<string> PlayerUsernames = new()
     {
@@ -19,7 +22,7 @@ public class PlayerData : MonoBehaviour
     public RelayManager relay;
 
     // string array storing the text should be shown
-    public List<(int,string)> answerToBeShown;
+    public List<(int,string)> answerToBeShown = new();
 
     // Static Integer representing (this) player's playerNumber
     public static int PlayerNumber;
@@ -152,11 +155,11 @@ public class PlayerData : MonoBehaviour
     }
 
     IEnumerator toMadlibScreen() {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(6);
         toMadlib();
     }
 
-    public void toMadlib()
+    public void toMadlib() // Host only
     {
         int winner = miniGameGrade[totalPlayerNumber - 1].Item1;
         bool[] chosenAnswer = new bool[totalPlayerNumber];
@@ -176,7 +179,6 @@ public class PlayerData : MonoBehaviour
                 relay.addShowingAnswerClientRpc(answerList[i].Item1, answerList[i].Item2);
             }
         }
-
 
         relay.toMadlibScreenClientRpc();
     }

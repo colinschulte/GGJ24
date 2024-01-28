@@ -30,7 +30,11 @@ public class MinigameScreen : MonoBehaviour
     // Called by GameManager
     public void StartMinigame()
     {
-        StartCoroutine(MinigameText());
+        //StartCoroutine(MinigameText());
+
+        //temporary SKIPS MINIGAME
+        clicks = 3;
+        relay.sendGradeToServerRpc(PlayerData.PlayerNumber, clicks);
     }
 
     private IEnumerator MinigameText()
@@ -79,8 +83,6 @@ public class MinigameScreen : MonoBehaviour
         clicksText.gameObject.SetActive(false);
 
         minigameText.text = "Total clicks: " + clicks;
-
-        Debug.Log("sent grade");
 
         yield return new WaitForSeconds(2);
 

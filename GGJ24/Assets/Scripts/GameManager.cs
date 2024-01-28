@@ -7,12 +7,14 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Image titleScreen;
     [SerializeField] public GameObject lobbyConnectScreen;
+    [SerializeField] public GameObject border;
     [SerializeField] public GameObject promptScreen;
     [SerializeField] public GameObject miniGameScreen;
     [SerializeField] public GameObject winnerScreen;
     [SerializeField] public GameObject madlibScreen;
 
     [SerializeField] RelayManager relay;
+    [SerializeField] DisplayPrompt madLibManager;
 
     
 
@@ -49,6 +51,7 @@ public class GameManager : MonoBehaviour
 
         titleScreen.gameObject.SetActive(false);
         lobbyConnectScreen.SetActive(true);
+        border.SetActive(true);
     }
 
     public void ClientStartGame(int p_index)
@@ -82,5 +85,7 @@ public class GameManager : MonoBehaviour
     {
         winnerScreen.SetActive(false);
         madlibScreen.SetActive(true);
+
+        madLibManager.StartMadlibs();
     }
 }

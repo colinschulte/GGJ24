@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class promptDisplay : MonoBehaviour
 {
+    [SerializeField] private PlayerData playerData;
+
     [SerializeField] TMP_Text prompt;
 
     [SerializeField] TMP_InputField input1;
@@ -15,6 +17,7 @@ public class promptDisplay : MonoBehaviour
     public void set_Text(string p) 
     {
         prompt.text = p;
+        playerData.prompt = p;
     }
 
     private string ans1;

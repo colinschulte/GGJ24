@@ -68,6 +68,7 @@ public class RelayManager : NetworkBehaviour
     [ClientRpc]
     public void toMadlibScreenClientRpc()
     {
+        Debug.Log("client tomad");
         GM.toMadlibScreen();
     }
 
@@ -75,5 +76,25 @@ public class RelayManager : NetworkBehaviour
     public void addShowingAnswerClientRpc(int p_number, string ans)
     {
         player.answerToBeShown.Add((p_number, ans));
+    }
+
+    private int votesReceived;
+
+    [ServerRpc (RequireOwnership = false)]
+    public void SendResultsToHostServerRpc(int playerID)
+    {
+        votesReceived += 1;
+        prompt.scoreList[playerID] += 1;
+
+        if (votesReceived < PlayerSetup.ConnectedPlayers)
+            return;
+
+        prompt.TallyVotes();
+    }
+
+    [ClientRpc]
+    public void SendScoresToClientsClientRpc(int[] playerNumbers, int[] scores)
+    {
+        prompt.DisplayResults(playerNumbers, scores);
     }
 }

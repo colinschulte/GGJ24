@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ba8cce737efee4abb4a529c1ed4f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 2015120931}
   prompt: {fileID: 1543170816}
   input1: {fileID: 798052601}
   input2: {fileID: 1066622643}
@@ -335,7 +336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &88008396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1021,7 +1022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &165510302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2163,7 +2164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &337893140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3193,7 +3194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &490329591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3228,6 +3229,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4a8b59c98bdff498d6985bdfb9ce30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonTexts:
+  - {fileID: 177040655}
+  - {fileID: 324880371}
+  - {fileID: 1540246784}
+  - {fileID: 1249746465}
+  - {fileID: 264421736}
+  - {fileID: 2043028415}
+  - {fileID: 1932284361}
+  - {fileID: 1025445031}
+  - {fileID: 1433133185}
+  panelScores:
+  - {fileID: 294437771}
+  - {fileID: 697139772}
+  - {fileID: 1305590215}
+  - {fileID: 721864882}
+  - {fileID: 81534963}
+  - {fileID: 1655434169}
+  - {fileID: 748989886}
+  - {fileID: 552811405}
   promptText: {fileID: 1032421245}
   buttons:
   - {fileID: 784630916}
@@ -3248,8 +3268,7 @@ MonoBehaviour:
   - {fileID: 165510301}
   - {fileID: 1774493954}
   - {fileID: 939863904}
-  relayManager: {fileID: 0}
-  resultsPanel: {fileID: 0}
+  relayManager: {fileID: 1350314982}
   playerColors:
   - serializedVersion: 2
     rgba: 0
@@ -3267,8 +3286,8 @@ MonoBehaviour:
     rgba: 0
   - serializedVersion: 2
     rgba: 0
-  playerData: {fileID: 0}
-  audioManager: {fileID: 0}
+  playerData: {fileID: 2015120931}
+  audioManager: {fileID: 569240096}
   music: {fileID: 8300000, guid: aa881d404a5587d4095ff8b322500798, type: 3}
   resultSFX: {fileID: 8300000, guid: d4eccab2d6492134c9e9f237aa92bc6e, type: 3}
 --- !u!1 &499396200
@@ -4097,8 +4116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49da879eb585674f87aaf8dd0c41935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Source: {fileID: 0}
-  sfx_Source: {fileID: 0}
+  m_Source: {fileID: 569240093}
+  sfx_Source: {fileID: 569240092}
 --- !u!1 &579661612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5726,7 +5745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &762604465
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7271,7 +7290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &939863905
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7640,10 +7659,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreen: {fileID: 1218471936}
   lobbyConnectScreen: {fileID: 656368489}
+  border: {fileID: 88008395}
   promptScreen: {fileID: 18997935}
   miniGameScreen: {fileID: 1962427965}
   winnerScreen: {fileID: 1350385958}
+  madlibScreen: {fileID: 490329590}
   relay: {fileID: 1350314982}
+  madLibManager: {fileID: 490329592}
 --- !u!1 &1025445029
 GameObject:
   m_ObjectHideFlags: 0
@@ -8215,7 +8237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1144102711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9453,7 +9475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1262163836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10232,7 +10254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6788439f1a39d214492666cb4f367700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: {fileID: 0}
+  prompt: {fileID: 490329592}
   player: {fileID: 2015120931}
   GM: {fileID: 999373194}
 --- !u!114 &1350314983
@@ -12551,7 +12573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1587434828
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14399,7 +14421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1774493955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15172,6 +15194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ce7fff292ab5648b920895a5b306c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prompt: 
   relay: {fileID: 1350314982}
   gradeList: 
   ranking: 
