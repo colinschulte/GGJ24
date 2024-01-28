@@ -14,6 +14,10 @@ public class DisplayPrompt : MonoBehaviour
     [SerializeField] private GameObject resultsPanel;
     [SerializeField] private List<Color32> playerColors;
     [SerializeField] private PlayerData playerData;
+    [SerializeField] private Audio audio;
+    [SerializeField] private AudioClip music;
+    [SerializeField] private AudioClip resultSFX;
+
     private string[] promptList;
     private Dictionary<int, int> scoreList;
     private Dictionary<int, int> rankList;
@@ -62,6 +66,8 @@ public class DisplayPrompt : MonoBehaviour
         }
         CreateScoreList();
         rankList = new Dictionary<int, int>();
+
+        audio.playMusic(music);
     }
 
     public void NextPrompt()
@@ -123,11 +129,13 @@ public class DisplayPrompt : MonoBehaviour
 
     public void DisplayResults()
     {
-        promptText.text = "Results";
         foreach(Button button in buttons)
         {
             button.gameObject.SetActive(false);
         }
+        promptText.text = "And the Winner is...";
+        audio.playSFX(resultSFX);
+        promptText.text = "Results";
         //resultsPanel.SetActive(true);
         //string resultsText = "Player  Rank" + Environment.NewLine;
         int resultEnum = 0;
@@ -146,7 +154,6 @@ public class DisplayPrompt : MonoBehaviour
             //resultsText += "Player" + (rank.Key + 1) + "  " + rank.Value + Environment.NewLine;
             resultEnum++;
         }
-        //resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text = resultsText;
     }
 
     public void CreateScoreList()
