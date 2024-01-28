@@ -1691,7 +1691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353677379}
   m_Layer: 5
-  m_Name: MadLibsScene
+  m_Name: MadLibsScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
