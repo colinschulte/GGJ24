@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/MiniGame_Tapping.unity
-    guid: cd0de755087ebbd43b23599a61949999
-  - enabled: 1
-    path: Assets/Scenes/LobbyConnect.unity
-    guid: ef77fdd5522301a47a7ba05fca85083b
+    path: Assets/Scenes/MainScene.unity
+    guid: 81de1b2e27537ac4c8c12aafe71d2c27
   m_configObjects: {}

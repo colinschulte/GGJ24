@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Platypus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Orangutan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e38bc5785596c83418ed52cc08d4721d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1307,7 +1307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &197371398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 862cc5b1a34c51e47bdae6fc402b72fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1421,7 +1421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &207435519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1732,7 +1732,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 258452546}
   m_OnClick:
     m_PersistentCalls:
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d0ac79cedf8344746b99b5b04398c9d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1952,7 +1952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &362098701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2259,7 +2259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0cea6abea50e54146ab3c8c489548d1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Hippo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -2651,7 +2651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &676198840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2865,7 +2865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d6dd1b6ac607a934f9eb025694e44c84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3036,7 +3036,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 776738862}
   m_TextViewport: {fileID: 188584402}
   m_TextComponent: {fileID: 1541596138}
@@ -3160,7 +3160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &789887103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3199,7 +3199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &877148323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3561,7 +3561,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 995824463}
   m_OnClick:
     m_PersistentCalls:
@@ -3748,7 +3748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b65e8a48bda6c3847b19b620c23cb98d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3823,7 +3823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Giraffe
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -4208,7 +4208,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1342580658}
   m_TextViewport: {fileID: 1826043305}
   m_TextComponent: {fileID: 83917874}
@@ -4332,7 +4332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1399269521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4911,7 +4911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Cobra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -5141,7 +5141,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1729768956}
   m_OnClick:
     m_PersistentCalls:
@@ -5241,7 +5241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Zebra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -5570,7 +5570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e670e8a4ff1dd3244bdfa4eead44d623, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5795,7 +5795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Meadowlark
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -5929,7 +5929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: afb677c73398cf643baa539be5b36045, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6037,7 +6037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2079504091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6161,7 +6161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Mouse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
