@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class MinigameScreen : MonoBehaviour
 {
     [SerializeField] private TMP_Text minigameText;
+    [SerializeField] private TMP_Text countdownText;
+    [SerializeField] private TMP_Text clicksText;
 
     [SerializeField] private Image balloonImage;
 
@@ -37,6 +39,9 @@ public class MinigameScreen : MonoBehaviour
 
     private IEnumerator MinigameText()
     {
+        clicksText.gameObject.SetActive(false);
+        countdownText.gameObject.SetActive(false);
+
         minigameText.text = "Click the Pump to inflate the ballooon as big as you can before the time runs out!";
 
         yield return new WaitForSeconds(3);
@@ -55,19 +60,27 @@ public class MinigameScreen : MonoBehaviour
 
         minigameText.text = "GO!";
 
+        clicksText.gameObject.SetActive(true);
+        countdownText.gameObject.SetActive(true);
+
         pumpButton.interactable = true;
+
+        yield return new WaitForSeconds(1);
 
         int countdown = countdownSeconds;
 
         for (int i = 0; i < countdownSeconds; i++)
         {
-            minigameText.text = countdown.ToString();
+            countdownText.text = countdown.ToString();
             countdown -= 1;
 
             yield return new WaitForSeconds(1);
         }
 
         pumpButton.interactable = false;
+
+        countdownText.gameObject.SetActive(false);
+        clicksText.gameObject.SetActive(false);
 
         minigameText.text = "Total clicks: " + clicks;
     }
@@ -83,8 +96,10 @@ public class MinigameScreen : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(clicks);
+        int phase = Mathf.FloorToInt(clicks / 11);
+        balloonImage.sprite = balloonPhases[phase];
 
-
+        if (clicksText.gameObject.activeSelf)
+            clicksText.text = "Pumps: " + clicks;
     }
 }
