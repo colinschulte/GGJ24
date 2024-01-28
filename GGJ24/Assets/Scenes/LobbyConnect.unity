@@ -745,6 +745,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameField: {fileID: 776738861}
   startButton: {fileID: 1729768955}
+  playerAvatarSpritesType0:
+  - {fileID: 21300000, guid: 94a7f72a87fa19c4485f19ce31990ba0, type: 3}
+  - {fileID: 21300000, guid: e670e8a4ff1dd3244bdfa4eead44d623, type: 3}
+  - {fileID: 21300000, guid: ba17154c39b82de4fb152b9340a7ebc8, type: 3}
+  - {fileID: 21300000, guid: 46f0fb94ae985fd4489bcb4ff5825b8d, type: 3}
+  - {fileID: 21300000, guid: 9f4de7a81d37d124db31b8117a5329b9, type: 3}
+  - {fileID: 21300000, guid: b33578e5fd9de224c9168467f5686288, type: 3}
+  - {fileID: 21300000, guid: 200e763d27db0564eb3a77fdcf60ad73, type: 3}
+  - {fileID: 21300000, guid: 55be5ded77fb5a145ba9443a519369e8, type: 3}
+  playerAvatarSpritesType1:
+  - {fileID: 21300000, guid: f23eb64072b65d24883df072d55bf791, type: 3}
+  - {fileID: 21300000, guid: 65fe266d0cf085e4bb7219a20554ea95, type: 3}
+  - {fileID: 21300000, guid: d6dd1b6ac607a934f9eb025694e44c84, type: 3}
+  - {fileID: 21300000, guid: 754d2291c565f5e4090b2bdc4d3b4f2a, type: 3}
+  - {fileID: 21300000, guid: 3593488d390fc3f49a0dbedda236a394, type: 3}
+  - {fileID: 21300000, guid: 083ae48a406156e48a9bda9d27ec4dd3, type: 3}
+  - {fileID: 21300000, guid: 7c23be8bbce39bb4ab1097c6cc1780f9, type: 3}
+  - {fileID: 21300000, guid: dd5c2ccab18c2fe41aba3777e09c8325, type: 3}
+  playerAvatarSpritesType2:
+  - {fileID: 21300000, guid: c307a962610a73440a37a91aee839f61, type: 3}
+  - {fileID: 21300000, guid: 2ea87c76e9975bc4798147d04260006f, type: 3}
+  - {fileID: 21300000, guid: b5de3c538558f914185d538902feb8e5, type: 3}
+  - {fileID: 21300000, guid: b65e8a48bda6c3847b19b620c23cb98d, type: 3}
+  - {fileID: 21300000, guid: 6c6ecb609804bf5469adf2c7da40e2f9, type: 3}
+  - {fileID: 21300000, guid: 9f80092a784943e4bb6ea93e54e1b5d3, type: 3}
+  - {fileID: 21300000, guid: 51909333f2f2ed244919557e6948c7db, type: 3}
+  - {fileID: 21300000, guid: 96863f6c32d76b9408c186e137a41369, type: 3}
+  playerAvatarSpritesType3:
+  - {fileID: 21300000, guid: a2db05ba4c9506447a5c3f81bbb37059, type: 3}
+  - {fileID: 21300000, guid: 67f3348cee3bc894ea1aeb484b2e7eac, type: 3}
+  - {fileID: 21300000, guid: c7504f0e061dfce49929f5e18e2f70ed, type: 3}
+  - {fileID: 21300000, guid: 7029380857d9881409a02c9b4c49c06b, type: 3}
+  - {fileID: 21300000, guid: d0ac79cedf8344746b99b5b04398c9d8, type: 3}
+  - {fileID: 21300000, guid: 4851657f663dfe2489eb1fc0ac603ef3, type: 3}
+  - {fileID: 21300000, guid: f29fdcc90cbe4474685b3cfebf6a1e87, type: 3}
+  - {fileID: 21300000, guid: 0f58b438b84275f49b14d5c826176091, type: 3}
+  playerAvatarSpritesType4:
+  - {fileID: 21300000, guid: cb5987ac3fe5f6040adfd5c03f7eefe3, type: 3}
+  - {fileID: 21300000, guid: 3484f95b90e6a3549833077efd1790c8, type: 3}
+  - {fileID: 21300000, guid: e0221e5b7fe30464cb0dd0aac886f8d4, type: 3}
+  - {fileID: 21300000, guid: 94d903ea5a2221e4ea3fbe781682fa14, type: 3}
+  - {fileID: 21300000, guid: 30c8b28451dfd13468e8d627358ca546, type: 3}
+  - {fileID: 21300000, guid: b375f66974aa07e4ca295c1f72d4f95c, type: 3}
+  - {fileID: 21300000, guid: db2c23a6af4688941b7bb5b8b8b67fd0, type: 3}
+  - {fileID: 21300000, guid: da7161e6b6da3594f8ee8f844dc207cd, type: 3}
+  playerAvatarSpritesType5:
+  - {fileID: 21300000, guid: 0ba6e558c08171f40b04da07b6b82eaf, type: 3}
+  - {fileID: 21300000, guid: 7deef4461dd643f48accaab36091b7b0, type: 3}
+  - {fileID: 21300000, guid: c329b119fce4c354f9f11ac226b31de9, type: 3}
+  - {fileID: 21300000, guid: c46eb4b486ac46c42b91b5c4432650ea, type: 3}
+  - {fileID: 21300000, guid: b5f915d0a32d27748a0db6ad502a4f82, type: 3}
+  - {fileID: 21300000, guid: 0cea6abea50e54146ab3c8c489548d1f, type: 3}
+  - {fileID: 21300000, guid: e38bc5785596c83418ed52cc08d4721d, type: 3}
+  - {fileID: 21300000, guid: afb677c73398cf643baa539be5b36045, type: 3}
+  playerAvatarSpritesType6:
+  - {fileID: 21300000, guid: 862cc5b1a34c51e47bdae6fc402b72fc, type: 3}
+  - {fileID: 21300000, guid: 2827b63cf70a9f44ca75144111895e25, type: 3}
+  - {fileID: 21300000, guid: b8503e12f28b9db4c832ab19ccc1d1c9, type: 3}
+  - {fileID: 21300000, guid: 3b53c8519737c3442ba1b72af30f2a18, type: 3}
+  - {fileID: 21300000, guid: 89f656fae3c598e46a950f5e508a5c87, type: 3}
+  - {fileID: 21300000, guid: d43b577dab67e2544bc9d4d21c7ab259, type: 3}
+  - {fileID: 21300000, guid: caea65b133afa344b8eb59bdd5a15d67, type: 3}
+  - {fileID: 21300000, guid: 5e3e5ded59b74be4d8def11435419dc0, type: 3}
+  playerAvatarSpritesType7:
+  - {fileID: 21300000, guid: 2b694a106d5b7f0439e9c26ba7b8eb0d, type: 3}
+  - {fileID: 21300000, guid: 10a421f4ea588254b9047e85251746ed, type: 3}
+  - {fileID: 21300000, guid: 465605b49a54be444961c2a7e9e9141b, type: 3}
+  - {fileID: 21300000, guid: 23535422db65cec489207290459bad47, type: 3}
+  - {fileID: 21300000, guid: a84548a6201847c4ba7cb6f242019f04, type: 3}
+  - {fileID: 21300000, guid: 9d231d97a805b3a42960f1566b01b369, type: 3}
+  - {fileID: 21300000, guid: 4b0b738e9cc01e34d9a5fc0f0e1a1de9, type: 3}
+  - {fileID: 21300000, guid: ad5da628e722e5841869080734211367, type: 3}
   playerBanners:
   - {fileID: 2079504090}
   - {fileID: 1399269520}
