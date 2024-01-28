@@ -58,4 +58,10 @@ public class RelayManager : NetworkBehaviour
     {
         GM.clientStartMiniGame();
     }
+
+    [ClientRpc]
+    public void showWinnerClientRpc(int winner)
+    {
+        GM.clientShowWinner(winner);
+    }
 }

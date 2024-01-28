@@ -7,7 +7,12 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     // List of all players in game
-    public static List<string> PlayerUsernames = new();
+    public static List<string> PlayerUsernames = new()
+    {
+        string.Empty, string.Empty, string.Empty,
+        string.Empty, string.Empty, string.Empty,
+        string.Empty, string.Empty,
+    };
 
     // reference of Relaymanager
     public RelayManager relay;
@@ -135,8 +140,9 @@ public class PlayerData : MonoBehaviour
             playerRanks[i] = (miniGameGrade[i].Item1);
             playerGrades[i] = miniGameGrade[i].Item2;
         }
-        relay.sendMiniGameGradeClientRpc(playerGrades);
-        relay.sendMiniGameRankClientRpc(playerRanks);
+        /* relay.sendMiniGameGradeClientRpc(playerGrades);
+         relay.sendMiniGameRankClientRpc(playerRanks);*/
+        relay.showWinnerClientRpc(playerRanks[totalPlayerNumber-1]);
     } 
 
     // **TODO** supposed to do the same thing as sendGrade() but just change the target to the text answer.

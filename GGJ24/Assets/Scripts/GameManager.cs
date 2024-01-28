@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject lobbyConnectScreen;
     [SerializeField] public GameObject promptScreen;
     [SerializeField] public GameObject miniGameScreen;
+    [SerializeField] public GameObject winnerScreen;
 
     [SerializeField] RelayManager relay;
 
@@ -66,5 +67,13 @@ public class GameManager : MonoBehaviour
         miniGameScreen.SetActive(true);
 
         miniGameScreen.GetComponent<MinigameScreen>().StartMinigame();
+    }
+
+    public void clientShowWinner(int index)
+    {
+        miniGameScreen.SetActive(false);
+        winnerScreen.SetActive(true);
+
+        winnerScreen.GetComponent<WinnerScreen>().showWinner(PlayerData.PlayerUsernames[index]);
     }
 }

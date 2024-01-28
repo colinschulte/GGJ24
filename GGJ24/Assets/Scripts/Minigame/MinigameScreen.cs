@@ -82,9 +82,11 @@ public class MinigameScreen : MonoBehaviour
 
         Debug.Log("sent grade");
 
+        yield return new WaitForSeconds(2);
+
         relay.sendGradeToServerRpc(PlayerData.PlayerNumber, clicks);
 
-        yield return new WaitForSeconds(2);
+        
     }
 
     public void SelectPump()
