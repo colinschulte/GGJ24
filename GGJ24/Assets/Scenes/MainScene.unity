@@ -9259,7 +9259,7 @@ MonoBehaviour:
   - {fileID: 1228882471}
   - {fileID: 901102226}
   - {fileID: 1214261689}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 999373194}
 --- !u!114 &1350314984
 MonoBehaviour:
   m_ObjectHideFlags: 0
