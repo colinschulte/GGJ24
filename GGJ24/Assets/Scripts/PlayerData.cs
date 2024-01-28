@@ -84,6 +84,10 @@ public class PlayerData : MonoBehaviour
             ansReceivedCount += 1;
             Debug.Log("add Answer:"+ans+" current answer count"+ ansReceivedCount.ToString());
         }
+        if (ansReceivedCount >= 2 * totalPlayerNumber)
+        {
+            relay.startMiniGameClientRpc();
+        }
     }
 
 

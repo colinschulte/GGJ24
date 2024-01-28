@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image titleScreen;
     [SerializeField] public GameObject lobbyConnectScreen;
     [SerializeField] public GameObject promptScreen;
+    [SerializeField] public GameObject miniGameScreen;
 
     [SerializeField] RelayManager relay;
 
@@ -57,5 +58,11 @@ public class GameManager : MonoBehaviour
         promptScreen.SetActive(true);
 
         promptScreen.GetComponent<promptDisplay>().set_Text(PlayerData.prompts[p_index]);
+    }
+
+    public void clientStartMiniGame()
+    {
+        promptScreen.SetActive(false);
+        miniGameScreen.SetActive(true);
     }
 }

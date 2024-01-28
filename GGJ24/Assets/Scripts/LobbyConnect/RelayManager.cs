@@ -10,6 +10,8 @@ public class RelayManager : NetworkBehaviour
 
     [SerializeField] PlayerData player;
 
+    [SerializeField] GameManager GM;
+
     // The only class that handled mid-game network logic.
 
     // The host player is a server AND a client.
@@ -43,5 +45,11 @@ public class RelayManager : NetworkBehaviour
     public void sendAnswerToServerRpc (int playerNumber, string ans)
     {
         player.addAnswer(playerNumber, ans);
+    }
+
+    [ClientRpc]
+    public void startMiniGameClientRpc()
+    {
+        GM.clientStartMiniGame();
     }
 }
