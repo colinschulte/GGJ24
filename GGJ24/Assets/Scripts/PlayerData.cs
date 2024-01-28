@@ -108,7 +108,6 @@ public class PlayerData : MonoBehaviour
     // n is the player number of the client, grade is that client's mini game grade.
     public void addGrade(int n, int grade)
     {
-        Debug.Log("Grade Received");
         if (gradeReceivedCount < totalPlayerNumber)
         {
             miniGameGrade.Add((n, grade));
