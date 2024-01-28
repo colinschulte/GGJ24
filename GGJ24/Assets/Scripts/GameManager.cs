@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioManager audioManager;
+    public AudioClip startingClip;
+    public AudioClip inputClip;
+
     [SerializeField] private Image titleScreen;
     [SerializeField] public GameObject lobbyConnectScreen;
     [SerializeField] public GameObject border;
@@ -22,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        audioManager.playMusic(startingClip);
+
         StartCoroutine(TitleScreenFade());
     }
     private void Update()
@@ -57,6 +63,8 @@ public class GameManager : MonoBehaviour
     public void ClientStartGame(int p_index)
     {
         // Run on all clients once the host starts the game
+        audioManager.playMusic(inputClip);
+
 
         lobbyConnectScreen.SetActive(false);
 

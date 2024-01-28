@@ -7657,6 +7657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4391da99de66d8459433d6c3f65f171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 569240096}
+  startingClip: {fileID: 8300000, guid: ccefd519e08ab884fbef17cafdd091e1, type: 3}
+  inputClip: {fileID: 8300000, guid: 6e3be4fde8b251e478ad341cf63c43fd, type: 3}
   titleScreen: {fileID: 1218471936}
   lobbyConnectScreen: {fileID: 656368489}
   border: {fileID: 88008395}
