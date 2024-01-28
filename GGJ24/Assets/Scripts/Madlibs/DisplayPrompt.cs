@@ -13,7 +13,8 @@ public class DisplayPrompt : MonoBehaviour
     [SerializeField] private RelayManager relayManager;
     [SerializeField] private GameObject resultsPanel;
     [SerializeField] private List<Color32> playerColors;
-    private List<string> promptList;
+    [SerializeField] private PlayerData playerData;
+    private string[] promptList;
     private Dictionary<int, int> scoreList;
     private Dictionary<int, int> rankList;
     private Dictionary<string, int> inputList;
@@ -26,14 +27,7 @@ public class DisplayPrompt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        promptList = new List<string>
-        {
-            "My favorite food is ______.",
-            "An ________ a day keeps the goblins away.",
-            "When life gives you ______ make ______-ade!",
-            "Don't touch that! It's covered in ______!",
-            "You know it's a bad day when the ______ is missing"
-        };
+        promptList = PlayerData.prompts;
 
         inputList = new Dictionary<string, int> { };
         inputList.Add("carrot", 0);
@@ -68,12 +62,6 @@ public class DisplayPrompt : MonoBehaviour
         }
         CreateScoreList();
         rankList = new Dictionary<int, int>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void NextPrompt()
@@ -119,7 +107,7 @@ public class DisplayPrompt : MonoBehaviour
             {
                 if (score.Value == hiScore) 
                 {
-                    rankList.Add(score.Key, rankNumber);
+                    rankList.Add(score.Key, score.Value);
                     rankAdded = true;
                 }
             }
@@ -140,7 +128,7 @@ public class DisplayPrompt : MonoBehaviour
         {
             button.gameObject.SetActive(false);
         }
-        resultsPanel.SetActive(true);
+        //resultsPanel.SetActive(true);
         //string resultsText = "Player  Rank" + Environment.NewLine;
         int resultEnum = 0;
         foreach(KeyValuePair<int, int> rank in rankList)
@@ -149,6 +137,9 @@ public class DisplayPrompt : MonoBehaviour
             panel.SetActive(true);
             Image panelImage = panel.GetComponent<Image>();
             panelImage.color = playerColors[rank.Key];
+            Image playerImage = panel.GetComponentInChildren<Image>();
+            //playerImage.sprite = PlayerData.playerSprite;
+
             TextMeshProUGUI[] resultTexts = panel.GetComponentsInChildren<TextMeshProUGUI>();
             resultTexts[0].text = "Player" + (rank.Key + 1);
             resultTexts[1].text = rank.Value.ToString();
