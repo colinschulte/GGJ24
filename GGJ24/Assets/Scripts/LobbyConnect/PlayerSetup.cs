@@ -96,12 +96,18 @@ public class PlayerSetup : NetworkBehaviour
     private void AssignPlayerNumberClientRpc(int newPlayerNumber, ClientRpcParams clientRpcParams)
     {
         PlayerData.PlayerNumber = newPlayerNumber;
+
+        rpcsIn += 1;
+
+        BothRpcsIn();
     }
 
     [ClientRpc]
-    private void UpdateAvatarsClientRpc(int[] avatarTypes, string player1Username, string player2Username, string player3Username, 
+    private void UpdateAvatarsClientRpc(int[] newAvatarTypes, string player1Username, string player2Username, string player3Username, 
         string player4Username, string player5Username, string player6Username, string player7Username, string player8Username)
     {
+        avatarTypes = newAvatarTypes;
+
         playerUsernamesTexts[0].text = player1Username;
         playerUsernamesTexts[1].text = player2Username;
         playerUsernamesTexts[2].text = player3Username;
@@ -115,7 +121,7 @@ public class PlayerSetup : NetworkBehaviour
         {
             // -1 is default
             if (avatarTypes[i] == -1)
-                return;
+                break;
 
             int randomNumber = avatarTypes[i];
 
@@ -123,11 +129,22 @@ public class PlayerSetup : NetworkBehaviour
 
             playerBanners[i].SetActive(true);
         }
+
+        rpcsIn += 1;
+
+        BothRpcsIn();
     }
 
+    private int rpcsIn;
+    private int[] avatarTypes;
     private void BothRpcsIn()
     {
+        if (rpcsIn < 2)
+            return;
 
+        int randomNumber = avatarTypes[PlayerData.PlayerNumber];
+
+        playerData.playerSprite = playerAvatarSpriteTypes[randomNumber][PlayerData.PlayerNumber];
     }
 
     [SerializeField] private GameManager gameManager;

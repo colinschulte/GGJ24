@@ -9173,6 +9173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameField: {fileID: 982036999}
   startButton: {fileID: 424699552}
+  playerData: {fileID: 2015120931}
   playerAvatarSpritesType0:
   - {fileID: 21300000, guid: 2a5086e7225472b478420b84b7578432, type: 3}
   - {fileID: 21300000, guid: f783183a9a883f342b348e236bf9016e, type: 3}
@@ -13519,6 +13520,7 @@ MonoBehaviour:
   relay: {fileID: 1350314982}
   gradeList: 
   ranking: 
+  playerSprite: {fileID: 0}
 --- !u!4 &2015120932
 Transform:
   m_ObjectHideFlags: 0
