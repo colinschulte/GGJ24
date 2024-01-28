@@ -16,7 +16,6 @@ public class PlayerData : MonoBehaviour
     // For each Tuple, the item 1 is an integer representing Player Number, and the item 2 is the score that player got in the mini game.
     public List<(int, int)> miniGameGrade;
     
-
     // Integer recording how many "mini game grade"/"prompt answer" the host have received.
     private int gradeReceivedCount;
     private int ansReceivedCount;

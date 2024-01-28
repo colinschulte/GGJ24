@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Image titleScreen;
-    [SerializeField] private GameObject lobbyConnectScreen;
-    [SerializeField] private GameObject promptScreen;
+    [SerializeField] public GameObject lobbyConnectScreen;
+    [SerializeField] public GameObject promptScreen;
+
+    [SerializeField] RelayManager relay;
 
     private int fade;
 
@@ -47,6 +49,13 @@ public class GameManager : MonoBehaviour
 
     public void SelectStartGame()
     {
+        relay.goPromptSceneClientRpc();
+    }
+
+    public void ClientStartGame()
+    {
+        // Run on all clients once the host starts the game
+
         lobbyConnectScreen.SetActive(false);
 
         promptScreen.SetActive(true);

@@ -8,7 +8,9 @@ public class RelayManager : NetworkBehaviour
 {
     [SerializeField] private DisplayPrompt prompt;
 
-    PlayerData player;
+    [SerializeField] PlayerData player;
+
+    [SerializeField] GameManager GM;
 
     // The only class that handled mid-game network logic.
 
@@ -43,5 +45,14 @@ public class RelayManager : NetworkBehaviour
     public void sendAnswerClientRPC(int playerID, string ans)
     {
         player.addAnswer(playerID, ans);
+    }
+
+    [ClientRpc]
+    public void goPromptSceneClientRpc()
+    {
+
+        GM.lobbyConnectScreen.SetActive(false);
+
+        GM.promptScreen.SetActive(true);
     }
 }

@@ -123,6 +123,7 @@ public class PlayerSetup : NetworkBehaviour
         }
     }
 
+    [SerializeField] private GameManager gameManager;
     public void SelectStartGame()
     {
         // Only run on Host
@@ -132,6 +133,6 @@ public class PlayerSetup : NetworkBehaviour
     [ClientRpc]
     public void StartGameClientRpc()
     {
-        // Switch screens
+        gameManager.ClientStartGame();
     }
 }
