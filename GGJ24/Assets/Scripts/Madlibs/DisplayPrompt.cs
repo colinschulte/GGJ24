@@ -14,7 +14,7 @@ public class DisplayPrompt : MonoBehaviour
     [SerializeField] private GameObject resultsPanel;
     [SerializeField] private List<Color32> playerColors;
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private Audio audio;
+    [SerializeField] private AudioManager audioManager;
     [SerializeField] private AudioClip music;
     [SerializeField] private AudioClip resultSFX;
 
@@ -29,30 +29,32 @@ public class DisplayPrompt : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public void StartMadlibs()
     {
         promptList = PlayerData.prompts;
 
-        inputList = new Dictionary<string, int> { };
-        inputList.Add("carrot", 0);
-        inputList.Add("apple", 1);
-        inputList.Add("tire", 2);
-        inputList.Add("pizza", 0);
-        inputList.Add("Chungus", 3);
-        inputList.Add("boot", 4);
-        inputList.Add("eagle", 5);
-        inputList.Add("K-Mart", 6);
+        inputList = new Dictionary<string, int>
+        {
+            { "carrot", 0 },
+            { "apple", 1 },
+            { "tire", 2 },
+            { "pizza", 0 },
+            { "Chungus", 3 },
+            { "boot", 4 },
+            { "eagle", 5 },
+            { "K-Mart", 6 }
+        };
 
         playerColors = new List<Color32>
         {
-            new Color32(200, 46, 46, 255),
-            new Color32(46, 73, 200, 255),
-            new Color32(46, 200, 55, 255),
-            new Color32(200, 199, 46, 255),
-            new Color32(200, 46, 200, 255),
-            new Color32(46, 200, 195, 255),
-            new Color32(200, 124, 46, 255),
-            new Color32(189, 190, 189, 255)
+            new(200, 46, 46, 255),
+            new(46, 73, 200, 255),
+            new(46, 200, 55, 255),
+            new(200, 199, 46, 255),
+            new(200, 46, 200, 255),
+            new(46, 200, 195, 255),
+            new(200, 124, 46, 255),
+            new(189, 190, 189, 255)
         };
 
         promptText.text = promptList[promptEnum];
@@ -67,7 +69,7 @@ public class DisplayPrompt : MonoBehaviour
         CreateScoreList();
         rankList = new Dictionary<int, int>();
 
-        audio.playMusic(music);
+        audioManager.playMusic(music);
     }
 
     public void NextPrompt()
@@ -134,7 +136,7 @@ public class DisplayPrompt : MonoBehaviour
             button.gameObject.SetActive(false);
         }
         promptText.text = "And the Winner is...";
-        audio.playSFX(resultSFX);
+        audioManager.playSFX(resultSFX);
         promptText.text = "Results";
         //resultsPanel.SetActive(true);
         //string resultsText = "Player  Rank" + Environment.NewLine;
