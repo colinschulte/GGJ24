@@ -13555,6 +13555,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b4fcb175f8b371f4da0d91648a6ddf50, type: 3}
   pumpUpSprite: {fileID: 21300000, guid: 9d103dacee86427478b5e954c302e546, type: 3}
   pumpDownSprite: {fileID: 21300000, guid: c08defdd90f81d547a863be1a58677b1, type: 3}
+  relay: {fileID: 1350314982}
 --- !u!1 &1967025989
 GameObject:
   m_ObjectHideFlags: 0
