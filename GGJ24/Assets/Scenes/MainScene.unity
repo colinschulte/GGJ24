@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ba8cce737efee4abb4a529c1ed4f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: {fileID: 1323638422}
+  prompt: {fileID: 1543170816}
   player: {fileID: 2015120931}
 --- !u!1 &93934005
 GameObject:
@@ -7455,7 +7455,7 @@ MonoBehaviour:
   titleScreen: {fileID: 1218471936}
   lobbyConnectScreen: {fileID: 656368489}
   promptScreen: {fileID: 18997935}
-  miniGameScreen: {fileID: 0}
+  miniGameScreen: {fileID: 1962427965}
   relay: {fileID: 1350314982}
 --- !u!1 &1036382313
 GameObject:
@@ -9255,7 +9255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prompt: {fileID: 0}
   player: {fileID: 2015120931}
-  GM: {fileID: 0}
+  GM: {fileID: 999373194}
 --- !u!114 &1350314983
 MonoBehaviour:
   m_ObjectHideFlags: 0

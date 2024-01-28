@@ -64,5 +64,7 @@ public class GameManager : MonoBehaviour
     {
         promptScreen.SetActive(false);
         miniGameScreen.SetActive(true);
+
+        miniGameScreen.GetComponent<MinigameScreen>().StartMinigame();
     }
 }

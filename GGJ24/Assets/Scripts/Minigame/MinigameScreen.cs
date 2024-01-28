@@ -25,12 +25,6 @@ public class MinigameScreen : MonoBehaviour
 
     private bool pumpIsUp = true;
 
-
-    private void Start() //temporary
-    {
-        StartMinigame();
-    }
-
     // Called by GameManager
     public void StartMinigame()
     {
