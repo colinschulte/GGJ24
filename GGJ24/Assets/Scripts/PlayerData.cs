@@ -39,6 +39,15 @@ public class PlayerData : MonoBehaviour
     // Array of integers representing the player numbers, in ranking order.
     public int[] ranking;
 
+    public static string[] prompts =
+    {
+        "My favorite food is ______.",
+        "An ________ a day keeps the goblins away.",
+        "When life gives you ______ make ______-ade!",
+        "Don't touch that! It's covered in ______!",
+        "You know it's a bad day when the ______ is missing"
+    };
+
     // Start is called before the first frame update
     void Start()
     {
