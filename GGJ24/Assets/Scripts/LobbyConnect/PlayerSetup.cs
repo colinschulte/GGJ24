@@ -36,7 +36,7 @@ public class PlayerSetup : NetworkBehaviour
 
     private readonly int numberOfAvatarTypes = 8;
 
-    private readonly int minimumPlayers = 2;
+    private readonly int minimumPlayers = 1;
 
     private void Awake()
     {
@@ -126,7 +126,7 @@ public class PlayerSetup : NetworkBehaviour
     [SerializeField] private GameManager gameManager;
     public void SelectStartGame()
     {
-        int prompt_index = Random.Range(0, 10);
+        int prompt_index = Random.Range(0, PlayerData.prompts.Length);
         // Only run on Host
         StartGameClientRpc(prompt_index);
     }

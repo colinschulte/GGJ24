@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] RelayManager relay;
 
+    
+
     private int fade;
 
     private void Start()
@@ -53,5 +55,7 @@ public class GameManager : MonoBehaviour
         lobbyConnectScreen.SetActive(false);
 
         promptScreen.SetActive(true);
+
+        promptScreen.GetComponent<promptDisplay>().set_Text(PlayerData.prompts[p_index]);
     }
 }
