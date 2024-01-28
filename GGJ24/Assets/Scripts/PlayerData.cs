@@ -170,6 +170,10 @@ public class PlayerData : MonoBehaviour
             {
                 chosenAnswer[answerList[i].Item1] = true;
                 relay.addShowingAnswerClientRpc(answerList[i].Item1, answerList[i].Item2);
+            }else if (answerList[i].Item1 == winner)
+            {
+                chosenAnswer[answerList[i].Item1] = true;
+                relay.addShowingAnswerClientRpc(answerList[i].Item1, answerList[i].Item2);
             }
         }
 
