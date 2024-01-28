@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Audio : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource m_Source;
     [SerializeField] AudioSource sfx_Source;
