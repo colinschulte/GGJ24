@@ -39,11 +39,9 @@ public class RelayManager : NetworkBehaviour
         player.setArr(1, arr);
     }
 
-    [ClientRpc]
-    public void sendAnswerClientRpc(int playerID, string ans)
+    [ServerRpc(RequireOwnership = false)]
+    public void sendAnswerToServerRpc (int playerNumber, string ans)
     {
-        player.addAnswer(playerID, ans);
+        player.addAnswer(playerNumber, ans);
     }
-
-    
 }

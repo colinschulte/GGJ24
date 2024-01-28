@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: {fileID: 1323638422}
+  player: {fileID: 2015120931}
 --- !u!1 &73136180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,6 +2385,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1350314983}
         m_TargetAssemblyTypeName: PlayerSetup, Assembly-CSharp
         m_MethodName: SelectStartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2015120931}
+        m_TargetAssemblyTypeName: PlayerData, Assembly-CSharp
+        m_MethodName: updateStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5371,9 +5384,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: reader, Assembly-CSharp
-        m_MethodName: save
+      - m_Target: {fileID: 18997937}
+        m_TargetAssemblyTypeName: promptDisplay, Assembly-CSharp
+        m_MethodName: save1
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7717,9 +7730,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: reader, Assembly-CSharp
-        m_MethodName: save
+      - m_Target: {fileID: 18997937}
+        m_TargetAssemblyTypeName: promptDisplay, Assembly-CSharp
+        m_MethodName: save2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9341,9 +9354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571ff72201034143883a2e5389bd07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdown_UI: {fileID: 223800450}
-  time: 10
-  relay: {fileID: 0}
 --- !u!4 &1361187835
 Transform:
   m_ObjectHideFlags: 0
@@ -10204,9 +10214,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: reader, Assembly-CSharp
-        m_MethodName: go_reader
+      - m_Target: {fileID: 18997937}
+        m_TargetAssemblyTypeName: promptDisplay, Assembly-CSharp
+        m_MethodName: click_submit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

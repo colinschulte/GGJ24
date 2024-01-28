@@ -60,7 +60,7 @@ public class PlayerData : MonoBehaviour
     
 
     // After click the StartGame button, run this method to initialize some data.
-    public void updateStartGame(int n)
+    public void updateStartGame()
     {
         totalPlayerNumber = PlayerSetup.ConnectedPlayers;
         votes = new int[totalPlayerNumber];
@@ -68,6 +68,7 @@ public class PlayerData : MonoBehaviour
         {
             votes[i] = 0;
         }
+        Debug.Log(totalPlayerNumber);
     }
 
 
@@ -79,6 +80,7 @@ public class PlayerData : MonoBehaviour
         {
             answerList.Add((n, ans));
             ansReceivedCount += 1;
+            Debug.Log("add Answer:"+ans+" current answer count"+ ansReceivedCount.ToString());
         }
     }
 
@@ -127,10 +129,9 @@ public class PlayerData : MonoBehaviour
     } 
 
     // **TODO** supposed to do the same thing as sendGrade() but just change the target to the text answer.
-    void sendAnswer()
+    public void sendAnswerToServer(string ans)
     {
-        string answer = "test";
-        relay.sendAnswerClientRpc(PlayerNumber, answer);
+        relay.sendAnswerToServerRpc(PlayerNumber, ans);
     }
 
     // for clients to receive and store the results of grade/answer after host's processing.
