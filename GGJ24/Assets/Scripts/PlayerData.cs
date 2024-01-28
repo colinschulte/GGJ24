@@ -108,12 +108,13 @@ public class PlayerData : MonoBehaviour
     // n is the player number of the client, grade is that client's mini game grade.
     public void addGrade(int n, int grade)
     {
+        Debug.Log("Grade Received");
         if (gradeReceivedCount < totalPlayerNumber)
         {
             miniGameGrade.Add((n, grade));
             gradeReceivedCount += 1;
         }
-        else if (!gradeSent)
+        if (!gradeSent && gradeReceivedCount >= totalPlayerNumber)
         {
             gradeSent = true;
             miniGameGrade.Sort((a,b) => a.Item2.CompareTo(b.Item2));
@@ -123,15 +124,17 @@ public class PlayerData : MonoBehaviour
 
     // Host use this method to sort and reformat mini game grade and send to each client.
     void sendGrade()
-    { 
-        int[] playerNumbers = new int[miniGameGrade.Count];
+    {
+        Debug.Log("Grade Sent");
+        int[] playerRanks = new int[miniGameGrade.Count];
         int[] playerGrades = new int[miniGameGrade.Count];
         for (int i = 0; i < miniGameGrade.Count; i++)
         {
-            playerNumbers[i] = (miniGameGrade[i].Item1);
+            playerRanks[i] = (miniGameGrade[i].Item1);
             playerGrades[i] = miniGameGrade[i].Item2;
         }
-        relay.sendMiniGameGradeClientRpc(playerNumbers);
+        relay.sendMiniGameGradeClientRpc(playerGrades);
+        relay.sendMiniGameRankClientRpc(playerRanks);
     } 
 
     // **TODO** supposed to do the same thing as sendGrade() but just change the target to the text answer.

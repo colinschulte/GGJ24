@@ -36,6 +36,12 @@ public class RelayManager : NetworkBehaviour
     }
 
     [ClientRpc]
+    public void sendMiniGameRankClientRpc(int[] arr)
+    {
+        player.setArr(1, arr);
+    }
+
+    [ClientRpc]
     public void sendRankingClientRpc(int[] arr)
     {
         player.setArr(1, arr);

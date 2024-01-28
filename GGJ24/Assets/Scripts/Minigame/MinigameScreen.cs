@@ -25,6 +25,8 @@ public class MinigameScreen : MonoBehaviour
 
     private bool pumpIsUp = true;
 
+    [SerializeField] private RelayManager relay;
+
     // Called by GameManager
     public void StartMinigame()
     {
@@ -77,6 +79,12 @@ public class MinigameScreen : MonoBehaviour
         clicksText.gameObject.SetActive(false);
 
         minigameText.text = "Total clicks: " + clicks;
+
+        Debug.Log("sent grade");
+
+        relay.sendGradeToServerRpc(PlayerData.PlayerNumber, clicks);
+
+        yield return new WaitForSeconds(2);
     }
 
     public void SelectPump()
