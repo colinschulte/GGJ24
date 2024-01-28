@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 3)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Connected!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -80
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usernameField: {fileID: 776738861}
-  lobbyCodeField: {fileID: 0}
+  lobbyCodeField: {fileID: 1342580657}
   joinLobbyButton: {fileID: 995824462}
   createLobbyButton: {fileID: 258452545}
   errorText: {fileID: 81723553}
@@ -744,6 +744,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usernameField: {fileID: 776738861}
+  startButton: {fileID: 1729768955}
+  playerBanners:
+  - {fileID: 2079504090}
+  - {fileID: 1399269520}
+  - {fileID: 207435518}
+  - {fileID: 877148322}
+  - {fileID: 676198839}
+  - {fileID: 789887102}
+  - {fileID: 197371397}
+  - {fileID: 362098700}
+  playerUsernamesTexts:
+  - {fileID: 395267939}
+  - {fileID: 1132069575}
+  - {fileID: 64543393}
+  - {fileID: 1696253427}
+  - {fileID: 2133360057}
+  - {fileID: 1748498016}
+  - {fileID: 104072740}
+  - {fileID: 1985037546}
+  playerAvatars:
+  - {fileID: 198687520}
+  - {fileID: 1926670195}
+  - {fileID: 736943528}
+  - {fileID: 1082759426}
+  - {fileID: 306221845}
+  - {fileID: 391036959}
+  - {fileID: 125274062}
+  - {fileID: 1989274127}
 --- !u!114 &93233770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 7)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -948,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caea65b133afa344b8eb59bdd5a15d67, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1202,12 +1230,12 @@ GameObject:
   m_Component:
   - component: {fileID: 197371398}
   m_Layer: 5
-  m_Name: Player7
+  m_Name: Player7Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &197371398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1288,7 +1316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 862cc5b1a34c51e47bdae6fc402b72fc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1316,12 +1344,12 @@ GameObject:
   m_Component:
   - component: {fileID: 207435519}
   m_Layer: 5
-  m_Name: Player3
+  m_Name: Player3Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &207435519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1632,7 +1660,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 258452546}
   m_OnClick:
     m_PersistentCalls:
@@ -1744,7 +1772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89f656fae3c598e46a950f5e508a5c87, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1847,12 +1875,12 @@ GameObject:
   m_Component:
   - component: {fileID: 362098701}
   m_Layer: 5
-  m_Name: Player8
+  m_Name: Player8Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &362098701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2159,7 +2187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d43b577dab67e2544bc9d4d21c7ab259, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2234,7 +2262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 1)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -2546,12 +2574,12 @@ GameObject:
   m_Component:
   - component: {fileID: 676198840}
   m_Layer: 5
-  m_Name: Player5
+  m_Name: Player5Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &676198840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2765,7 +2793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b8503e12f28b9db4c832ab19ccc1d1c9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2936,7 +2964,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 776738862}
   m_TextViewport: {fileID: 188584402}
   m_TextComponent: {fileID: 1541596138}
@@ -3055,12 +3083,12 @@ GameObject:
   m_Component:
   - component: {fileID: 789887103}
   m_Layer: 5
-  m_Name: Player6
+  m_Name: Player6Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &789887103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3094,12 +3122,12 @@ GameObject:
   m_Component:
   - component: {fileID: 877148323}
   m_Layer: 5
-  m_Name: Player4
+  m_Name: Player4Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &877148323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3461,7 +3489,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 995824463}
   m_OnClick:
     m_PersistentCalls:
@@ -3648,7 +3676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b53c8519737c3442ba1b72af30f2a18, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3723,7 +3751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 2)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -4108,7 +4136,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1342580658}
   m_TextViewport: {fileID: 1826043305}
   m_TextComponent: {fileID: 83917874}
@@ -4227,12 +4255,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1399269521}
   m_Layer: 5
-  m_Name: Player2
+  m_Name: Player2Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1399269521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4811,7 +4839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 4)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -5141,7 +5169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 6)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -5470,7 +5498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2827b63cf70a9f44ca75144111895e25, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5695,7 +5723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 8)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
@@ -5829,7 +5857,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5e3e5ded59b74be4d8def11435419dc0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5932,12 +5960,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2079504091}
   m_Layer: 5
-  m_Name: Player1
+  m_Name: Player1Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2079504091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6061,7 +6089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (player 5)
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}
   m_sharedMaterial: {fileID: -3308433960446671531, guid: f2231af642a763d47a44d99cb5a0da37, type: 2}

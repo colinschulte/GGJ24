@@ -45,6 +45,16 @@ public class LobbyConnect : NetworkBehaviour
         PlayerPrefs.SetString("LobbyCode", lobbyCodeField.text);
     }
 
+    private IEnumerator ErrorMessage(string newMessage)
+    {
+        errorText.text = newMessage;
+
+        yield return new WaitForSeconds(3);
+
+        if (errorText.text == newMessage)
+            errorText.text = string.Empty;
+    }
+
     private async Task ConnectToRelay() //run in Start
     {
         errorText.text = "Connecting...";
@@ -60,13 +70,13 @@ public class LobbyConnect : NetworkBehaviour
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-            errorText.text = "Connected!";
+            StartCoroutine(ErrorMessage("Connected!"));
 
             ToggleEnterLobbyInterface(true);
         }
         catch
         {
-            errorText.text = "Connection failed. Please check you internet connection and restart the game";
+            StartCoroutine(ErrorMessage("Connection failed. Please check your internet connection and restart the game"));
         }
     }
 
@@ -113,13 +123,13 @@ public class LobbyConnect : NetworkBehaviour
     {
         if (usernameField.text == string.Empty)
         {
-            errorText.text = "Must choose a username!";
+            StartCoroutine(ErrorMessage("Must choose a username!"));
             return true;
         }
 
         if (lobbyCodeField.text == string.Empty)
         {
-            errorText.text = "Must provide a lobby code!";
+            StartCoroutine(ErrorMessage("Must provide a lobby code!"));
             return true;
         }
 
@@ -147,7 +157,7 @@ public class LobbyConnect : NetworkBehaviour
 
             if (queryResponse.Results.Count != 0)
             {
-                errorText.text = "A lobby with that code already exists. Please choose another code";
+                StartCoroutine(ErrorMessage("A lobby with that code already exists. Please choose another code"));
                 return;
             }
 
@@ -246,7 +256,7 @@ public class LobbyConnect : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        errorText.text = "Joined Lobby!";
+        StartCoroutine(ErrorMessage("Joined Lobby!"));
 
         ToggleEnterLobbyInterface(false);
     }
