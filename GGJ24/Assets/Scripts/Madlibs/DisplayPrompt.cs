@@ -9,8 +9,10 @@ public class DisplayPrompt : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI promptText;
     [SerializeField] private List<Button> buttons;
+    [SerializeField] private List<GameObject> resultPanels;
     [SerializeField] private RelayManager relayManager;
     [SerializeField] private GameObject resultsPanel;
+    [SerializeField] private List<Color32> playerColors;
     private List<string> promptList;
     private Dictionary<int, int> scoreList;
     private Dictionary<int, int> rankList;
@@ -42,6 +44,18 @@ public class DisplayPrompt : MonoBehaviour
         inputList.Add("boot", 4);
         inputList.Add("eagle", 5);
         inputList.Add("K-Mart", 6);
+
+        playerColors = new List<Color32>
+        {
+            new Color32(200, 46, 46, 255),
+            new Color32(46, 73, 200, 255),
+            new Color32(46, 200, 55, 255),
+            new Color32(200, 199, 46, 255),
+            new Color32(200, 46, 200, 255),
+            new Color32(46, 200, 195, 255),
+            new Color32(200, 124, 46, 255),
+            new Color32(189, 190, 189, 255)
+        };
 
         promptText.text = promptList[promptEnum];
 
@@ -127,12 +141,21 @@ public class DisplayPrompt : MonoBehaviour
             button.gameObject.SetActive(false);
         }
         resultsPanel.SetActive(true);
-        string resultsText = "Player  Rank" + System.Environment.NewLine;
+        //string resultsText = "Player  Rank" + Environment.NewLine;
+        int resultEnum = 0;
         foreach(KeyValuePair<int, int> rank in rankList)
         {
-            resultsText += rank.Key + "  " + rank.Value + System.Environment.NewLine;
+            GameObject panel = resultPanels[resultEnum];
+            panel.SetActive(true);
+            Image panelImage = panel.GetComponent<Image>();
+            panelImage.color = playerColors[rank.Key];
+            TextMeshProUGUI[] resultTexts = panel.GetComponentsInChildren<TextMeshProUGUI>();
+            resultTexts[0].text = "Player" + (rank.Key + 1);
+            resultTexts[1].text = rank.Value.ToString();
+            //resultsText += "Player" + (rank.Key + 1) + "  " + rank.Value + Environment.NewLine;
+            resultEnum++;
         }
-        resultsPanel.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = resultsText;
+        //resultsPanel.GetComponentInChildren<TextMeshProUGUI>().text = resultsText;
     }
 
     public void CreateScoreList()
