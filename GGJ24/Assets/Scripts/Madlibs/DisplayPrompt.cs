@@ -11,6 +11,7 @@ public class DisplayPrompt : MonoBehaviour
 {
     [SerializeField] private List<TMP_Text> buttonTexts = new();
     [SerializeField] private List<TMP_Text> panelScores = new();
+    [SerializeField] private List<TMP_Text> panelUsernames = new();
 
 
     [SerializeField] private TextMeshProUGUI promptText;
@@ -195,6 +196,7 @@ public class DisplayPrompt : MonoBehaviour
         for (int i = 0; i < scores.Length; i++)
         {
             panelScores[playerNumbers[i]].text = scores[i].ToString();
+            panelUsernames[playerNumbers[i]].text = PlayerData.PlayerUsernames[playerNumbers[i]].ToString();
         }
     }
 

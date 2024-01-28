@@ -3248,6 +3248,15 @@ MonoBehaviour:
   - {fileID: 1655434169}
   - {fileID: 748989886}
   - {fileID: 552811405}
+  panelUsernames:
+  - {fileID: 1345953049}
+  - {fileID: 1702137865}
+  - {fileID: 1319125696}
+  - {fileID: 120621123}
+  - {fileID: 702590800}
+  - {fileID: 1172117911}
+  - {fileID: 2024533850}
+  - {fileID: 322497662}
   promptText: {fileID: 1032421245}
   buttons:
   - {fileID: 784630916}
@@ -4118,6 +4127,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Source: {fileID: 569240093}
   sfx_Source: {fileID: 569240092}
+  clips:
+  - {fileID: 8300000, guid: c9c029cb1b208a2468a38d5b79a7199f, type: 3}
+  - {fileID: 8300000, guid: a6bd00c14e77bea43a75c66593d1baa4, type: 3}
+  - {fileID: 8300000, guid: 717a18bd6fd54274eac0426c69c5ae72, type: 3}
+  - {fileID: 8300000, guid: 6c4c6174624563a41823133e4f58a594, type: 3}
+  - {fileID: 8300000, guid: a01dc325d3faedd48abb849f9ee53144, type: 3}
+  - {fileID: 8300000, guid: 566bfd10f26ea3545a7b0e89e39ab33e, type: 3}
+  - {fileID: 8300000, guid: 90fd1f06c9c32c845a665da373cbf388, type: 3}
+  - {fileID: 8300000, guid: 48c4bf2ce281b464ab329e026db5e76b, type: 3}
+  - {fileID: 8300000, guid: 1e48949e5df6dbd48849ffdf836ccf0b, type: 3}
+  - {fileID: 8300000, guid: 1728684220a2d25449a9482d1528da28, type: 3}
+  - {fileID: 8300000, guid: 6d16287ca68103b46918c2eddbd81d5f, type: 3}
+  - {fileID: 8300000, guid: f4e4b0279daa8d2429f5d6bdc97bfcdc, type: 3}
+  - {fileID: 8300000, guid: 7950726031da6e646ab1b0a1171e8444, type: 3}
+  - {fileID: 8300000, guid: e7e17ff40022eb44a894279ec4271797, type: 3}
+  - {fileID: 8300000, guid: 5eaa053d34ecbc54a8190c67d3959b65, type: 3}
+  - {fileID: 8300000, guid: ea2ae58a09a330e4b9b1386c9a18c488, type: 3}
+  - {fileID: 8300000, guid: 25ef567bbd9309a408d030772041da84, type: 3}
+  - {fileID: 8300000, guid: 31526a59f39604a458c1d9356843c88e, type: 3}
+  - {fileID: 8300000, guid: d3446d68c58cc984a869245591627a31, type: 3}
+  - {fileID: 8300000, guid: 4aeec51fda74db744b6cc10e69c8ab28, type: 3}
+  - {fileID: 8300000, guid: 213dec5dd92d1e54e9eed4ef368f1765, type: 3}
+  - {fileID: 8300000, guid: 027c398c3fc5be248b4427dd9edbffb8, type: 3}
 --- !u!1 &579661612
 GameObject:
   m_ObjectHideFlags: 0
@@ -14076,6 +14108,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1959464777}
         m_TargetAssemblyTypeName: shoot, Assembly-CSharp
         m_MethodName: shoot_block
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 569240096}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayRandomSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
