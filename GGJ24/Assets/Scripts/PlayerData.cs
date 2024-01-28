@@ -39,6 +39,8 @@ public class PlayerData : MonoBehaviour
     // Array of integers representing the player numbers, in ranking order.
     public int[] ranking;
 
+    public Sprite playerSprite;
+
     public static string[] prompts =
     {
         "My favorite food is ______.",

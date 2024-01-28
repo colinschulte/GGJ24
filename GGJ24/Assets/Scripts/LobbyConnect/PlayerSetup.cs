@@ -13,6 +13,8 @@ public class PlayerSetup : NetworkBehaviour
     [SerializeField] private TMP_InputField usernameField;
     [SerializeField] private Button startButton;
 
+    [SerializeField] private PlayerData playerData;
+
 
     private readonly List<List<Sprite>> playerAvatarSpriteTypes = new();
 
@@ -121,6 +123,11 @@ public class PlayerSetup : NetworkBehaviour
 
             playerBanners[i].SetActive(true);
         }
+    }
+
+    private void BothRpcsIn()
+    {
+
     }
 
     [SerializeField] private GameManager gameManager;
