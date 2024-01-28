@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class promptDisplay : MonoBehaviour
 {
     [SerializeField] TMP_Text prompt;
 
+    public Button submit;
     public void set_Text(string p) 
     {
         prompt.text = p;
@@ -31,5 +33,6 @@ public class promptDisplay : MonoBehaviour
     {
         player.sendAnswerToServer(ans1);
         player.sendAnswerToServer(ans2);
+        submit.interactable = false;
     }
 }
